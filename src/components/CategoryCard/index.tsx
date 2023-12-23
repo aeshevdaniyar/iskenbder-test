@@ -1,5 +1,5 @@
 import { Box, Image, Text } from "@chakra-ui/react";
-import { FC } from "react";
+import { FC, memo } from "react";
 
 interface CategoryCardProps {
   title: string;
@@ -7,7 +7,7 @@ interface CategoryCardProps {
   image: string;
 }
 
-export const CategoryCard: FC<CategoryCardProps> = (props) => {
+export const CategoryCard: FC<CategoryCardProps> = memo((props) => {
   const { count, title, image } = props;
   return (
     <Box
@@ -31,4 +31,4 @@ export const CategoryCard: FC<CategoryCardProps> = (props) => {
       <Image alt={title} src={image} pos="absolute" right={0} bottom={0} />
     </Box>
   );
-};
+});
