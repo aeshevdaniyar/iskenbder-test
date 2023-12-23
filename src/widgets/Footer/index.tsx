@@ -1,5 +1,7 @@
 import { FacebookIcon, InstagramIcon, WhatsAppIcon } from "@assets/icons";
 import Logo from "@assets/images/Logo.png";
+import AppStore from "@assets/images/AppStore.png";
+import GooglePlay from "@assets/images/GooglePlay.png";
 import {
   Box,
   Button,
@@ -42,7 +44,10 @@ export const Footer = memo(() => {
               Первый отечественный бренд Iskender на рынке сантехники от
               компании ОсОО «Стройдом.кг»
             </Text>
-            <Stack direction={"row"} spacing={6}></Stack>
+            <Stack direction={"row"} spacing={6}>
+              <Image alt="AppStore" src={AppStore} />
+              <Image alt="GooglePlay" src={GooglePlay} />
+            </Stack>
           </Stack>
           <Stack align={"flex-start"} fontSize={"15px"}>
             <ListHeader>Адреса</ListHeader>
