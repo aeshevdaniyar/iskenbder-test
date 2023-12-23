@@ -5,7 +5,14 @@ import { Navigation } from "swiper/modules";
 
 import { ArrowLeft, ArrowRight } from "@assets/icons";
 import { Box, IconButton } from "@chakra-ui/react";
-import { Children, FC, PropsWithChildren, useCallback, useRef } from "react";
+import {
+  Children,
+  FC,
+  PropsWithChildren,
+  memo,
+  useCallback,
+  useRef,
+} from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { SwiperOptions } from "swiper/types";
@@ -19,7 +26,7 @@ interface SliderProps {
       }
     | undefined;
 }
-export const Slider: FC<PropsWithChildren<SliderProps>> = (props) => {
+export const Slider: FC<PropsWithChildren<SliderProps>> = memo((props) => {
   const { children, slidesPerView, disableArrow = false, breakpoint } = props;
   const sliderRef = useRef<SwiperRef | null>(null);
 
@@ -77,4 +84,4 @@ export const Slider: FC<PropsWithChildren<SliderProps>> = (props) => {
       )}
     </Box>
   );
-};
+});

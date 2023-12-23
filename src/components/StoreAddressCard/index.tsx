@@ -17,7 +17,7 @@ import {
   IconButton,
   Text,
 } from "@chakra-ui/react";
-import { FC } from "react";
+import { FC, memo } from "react";
 
 interface StoreAddressCardProps {
   avatar: string;
@@ -30,7 +30,7 @@ interface StoreAddressCardProps {
   name: string;
 }
 
-export const StoreAddressCard: FC<StoreAddressCardProps> = (props) => {
+export const StoreAddressCard: FC<StoreAddressCardProps> = memo((props) => {
   const { address, avatar, date, phoneNumber, name } = props;
   return (
     <Card rounded={"lg"} bgColor={"white"}>
@@ -76,4 +76,4 @@ export const StoreAddressCard: FC<StoreAddressCardProps> = (props) => {
       </CardFooter>
     </Card>
   );
-};
+});

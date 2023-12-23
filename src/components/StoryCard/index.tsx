@@ -1,10 +1,10 @@
 import { Image, Stack, Text } from "@chakra-ui/react";
-import { FC } from "react";
+import { FC, memo } from "react";
 interface StoryCardProps {
   image: string;
   title: string;
 }
-export const StoryCard: FC<StoryCardProps> = (props) => {
+export const StoryCard: FC<StoryCardProps> = memo((props) => {
   const { image, title } = props;
 
   return (
@@ -22,4 +22,4 @@ export const StoryCard: FC<StoryCardProps> = (props) => {
       <Text>{title}</Text>
     </Stack>
   );
-};
+});

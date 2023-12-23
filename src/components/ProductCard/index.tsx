@@ -11,7 +11,7 @@ import {
   Text,
   useControllableState,
 } from "@chakra-ui/react";
-import { FC } from "react";
+import { FC, memo } from "react";
 
 interface ProductCardProps {
   name: string;
@@ -22,7 +22,7 @@ interface ProductCardProps {
   inStock: boolean;
   isSet: boolean;
 }
-export const ProductCard: FC<ProductCardProps> = (props) => {
+export const ProductCard: FC<ProductCardProps> = memo((props) => {
   const [value, setValue] = useControllableState({ defaultValue: 0 });
   const { image, name, price, newPrice, oldPrice, inStock, isSet } = props;
   return (
@@ -148,4 +148,4 @@ export const ProductCard: FC<ProductCardProps> = (props) => {
       </CardFooter>
     </Card>
   );
-};
+});

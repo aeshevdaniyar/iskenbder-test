@@ -1,10 +1,10 @@
 import { Box, HStack, Heading } from "@chakra-ui/react";
-import { FC, PropsWithChildren, ReactNode } from "react";
+import { FC, PropsWithChildren, ReactNode, memo } from "react";
 interface SectionProps {
   title: string;
   rightSide?: ReactNode;
 }
-export const Section: FC<PropsWithChildren<SectionProps>> = (props) => {
+export const Section: FC<PropsWithChildren<SectionProps>> = memo((props) => {
   const { children, title, rightSide } = props;
 
   return (
@@ -17,4 +17,4 @@ export const Section: FC<PropsWithChildren<SectionProps>> = (props) => {
       {children}
     </Box>
   );
-};
+});

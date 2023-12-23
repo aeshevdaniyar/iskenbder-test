@@ -1,11 +1,11 @@
 import NewsBunner from "@assets/images/banner.png";
 import { Box, Button, HStack, Stack, Text } from "@chakra-ui/react";
-import { FC } from "react";
+import { FC, memo } from "react";
 interface NewsCardProps {
   discount: number;
   description: string;
 }
-export const NewsCard: FC<NewsCardProps> = (props) => {
+export const NewsCard: FC<NewsCardProps> = memo((props) => {
   const { description, discount } = props;
   return (
     <Box h={"180px"} bgImage={NewsBunner}>
@@ -29,4 +29,4 @@ export const NewsCard: FC<NewsCardProps> = (props) => {
       </HStack>
     </Box>
   );
-};
+});
