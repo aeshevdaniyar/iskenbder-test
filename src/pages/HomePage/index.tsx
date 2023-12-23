@@ -36,13 +36,13 @@ export const HomePage = () => {
             disableArrow
             breakpoint={{
               "@0.00": {
-                slidesPerView: 3,
+                slidesPerView: 2,
               },
               "@0.25": {
-                slidesPerView: 3,
+                slidesPerView: 2,
               },
               "@0.50": {
-                slidesPerView: 7,
+                slidesPerView: 4,
               },
               "@0.75": {
                 slidesPerView: 10,
@@ -95,7 +95,7 @@ export const HomePage = () => {
                   slidesPerView: 1,
                 },
                 "@0.50": {
-                  slidesPerView: 2,
+                  slidesPerView: 1,
                 },
                 "@0.75": {
                   slidesPerView: 3,
@@ -181,7 +181,7 @@ export const HomePage = () => {
                   slidesPerView: 1,
                 },
                 "@0.50": {
-                  slidesPerView: 2,
+                  slidesPerView: 1,
                 },
                 "@1.00": {
                   slidesPerView: 3,
@@ -203,7 +203,7 @@ export const HomePage = () => {
                   slidesPerView: 1,
                 },
                 "@0.50": {
-                  slidesPerView: 2,
+                  slidesPerView: 1,
                 },
                 "@0.75": {
                   slidesPerView: 3,
